@@ -1,0 +1,54 @@
+###
+POST http://127.0.0.1:8000/register/
+Content-Type: application/json
+
+{
+    "username" : "Nirmal",
+    "password" : "nirmal@123",
+    "email" : "nirmal@gmail.com"
+}
+
+
+
+###
+GET http://127.0.0.1:8000/users/
+Accept: application/json
+
+
+###
+GET http://127.0.0.1:8000/trips/
+Accept: application/json
+Authorization: Basic shamil:shamil@123
+
+###
+POST http://127.0.0.1:8000/trips/
+Content-Type: application/json
+Authorization: Basic Anu:anu@123
+
+{
+    "title": "Temple visit",
+    "start_date": "2026-11-30",
+    "destination": "Guruvayur"
+}
+
+
+###
+GET http://127.0.0.1:8000/trips/3/
+Accept: application/json
+Authorization: Basic Nirmal:nirmal@123
+
+###
+PUT http://127.0.0.1:8000/trips/1/
+Content-Type: application/json
+Authorization: Basic Anu:anu@123
+
+{
+    "title": "Family visit to Alapuzha",
+    "start_date": "2026-12-25",
+    "destination": "Alapuzha"
+}
+
+
+###
+DELETE http://127.0.0.1:8000/trips/1/
+Authorization: Basic Anu:anu@123
